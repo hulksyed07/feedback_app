@@ -1,0 +1,74 @@
+<%= javascript_include_tag "performance" %>
+
+
+<%= form_for(@performance) do |f| %>
+  <% if @performance.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@performance.errors.count, "error") %> prohibited this performance from being saved:</h2>
+
+      <ul>
+      <% @performance.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+
+
+
+<section id="performance_slider">
+  <h1>Team Performance Evaluator</h1>
+
+  <p style="color: #FF0000;">Your satisfaction index is <span id="satisfaction_index"></span></p>
+
+
+  <h4>Stakeholder satisfaction</h4>
+  <div class="slider" id= "slider_1"></div>
+  <p>Your slider has a value of <span id="slider_1_value"></span></p>
+  <h4>Deliver on time</h4>
+  <div class="slider" id= "slider_2"></div>
+  <p>Your slider has a value of <span id="slider_2_value"></span></p>
+  <h4>Deliver on budget</h4>
+  <div class="slider" id= "slider_3"></div>
+
+  <p>Your slider has a value of <span id="slider_3_value"></span></p>
+  <h4>Deliver all planned scope</h4>
+  <div class="slider" id= "slider_4"></div>
+
+  <p>Your slider has a value of <span id="slider_4_value"></span></p>
+  <h4>Meet quality requirements</h4>
+  <div class="slider" id= "slider_5"></div>
+
+  <p>Your slider has a value of <span id="slider_5_value"></span></p>
+
+
+<div class="hidden" >
+  <div class="field">
+    <%= f.label :stakeholder_satisfaction %><br>
+    <%= f.number_field :stakeholder_satisfaction , id: "slider_1_value_field"%>
+  </div>
+  <div class="field">
+    <%= f.label :timely_delivery %><br>
+    <%= f.number_field :timely_delivery ,id: "slider_2_value_field" %>
+  </div>
+  <div class="field">
+    <%= f.label :budget_delivery %><br>
+    <%= f.number_field :budget_delivery ,id: "slider_3_value_field"  %>
+  </div>
+  <div class="field">
+    <%= f.label :planned_scope_delivery %><br>
+    <%= f.number_field :planned_scope_delivery ,id: "slider_4_value_field"  %>
+  </div>
+  <div class="field">
+    <%= f.label :quality_requirements %><br>
+    <%= f.number_field :quality_requirements ,id: "slider_5_value_field"  %>
+  </div>
+</div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+</section>
+<% end %>

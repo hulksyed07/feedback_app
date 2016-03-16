@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  stakeholder: 1
+  timely_delivery: 1
+  budget_delivery: 1
+  planned_scope_delivery: 1
+  quality_requirements: 1
+
+two:
+  stakeholder: 1
+  timely_delivery: 1
+  budget_delivery: 1
+  planned_scope_delivery: 1
+  quality_requirements: 1

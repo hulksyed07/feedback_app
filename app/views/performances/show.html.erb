@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Stakeholder:</strong>
+  <%= @performance.stakeholder_satisfaction %>
+</p>
+
+<p>
+  <strong>Timely delivery:</strong>
+  <%= @performance.timely_delivery %>
+</p>
+
+<p>
+  <strong>Budget delivery:</strong>
+  <%= @performance.budget_delivery %>
+</p>
+
+<p>
+  <strong>Planned scope delivery:</strong>
+  <%= @performance.planned_scope_delivery %>
+</p>
+
+<p>
+  <strong>Quality requirements:</strong>
+  <%= @performance.quality_requirements %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_performance_path(@performance) %> |
+<%= link_to 'Back', performances_path %>
